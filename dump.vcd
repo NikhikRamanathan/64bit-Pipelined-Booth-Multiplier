@@ -1,0 +1,1528 @@
+$date
+	Tue Jun 16 01:16:00 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_pipelined_multiplier $end
+$var wire 128 ! pipelined_product [127:0] $end
+$var wire 1 " out_valid $end
+$var reg 1 # clk $end
+$var reg 1 $ in_valid $end
+$var reg 64 % operand_A [63:0] $end
+$var reg 64 & operand_B [63:0] $end
+$var reg 1 ' rst_n $end
+$scope module uut $end
+$var wire 1 # clk $end
+$var wire 1 $ in_valid $end
+$var wire 64 ( operand_A [63:0] $end
+$var wire 64 ) operand_B [63:0] $end
+$var wire 1 ' rst_n $end
+$var wire 32 * w_corr_carries [31:0] $end
+$var wire 128 + final_S [127:0] $end
+$var wire 128 , final_C_raw [127:0] $end
+$var wire 128 - final_C [127:0] $end
+$var wire 128 . L7_S [127:0] $end
+$var wire 128 / L7_C_raw [127:0] $end
+$var wire 128 0 L7_C [127:0] $end
+$var wire 128 1 L6_S [127:0] $end
+$var wire 128 2 L6_C_raw [127:0] $end
+$var wire 128 3 L6_C [127:0] $end
+$var parameter 32 4 WIDTH $end
+$var reg 1 " out_valid $end
+$var reg 128 5 pipelined_product [127:0] $end
+$var reg 64 6 r1_A [63:0] $end
+$var reg 64 7 r1_B [63:0] $end
+$var reg 128 8 r3_car [127:0] $end
+$var reg 128 9 r3_sum [127:0] $end
+$var reg 1 : valid_r1 $end
+$var reg 1 ; valid_r2 $end
+$var reg 1 < valid_r3 $end
+$var integer 32 = k [31:0] $end
+$scope begin booth_gen[0] $end
+$var parameter 2 > g $end
+$scope module eng $end
+$var wire 64 ? multiplicand_x [63:0] $end
+$var wire 3 @ multiplier_group_y [2:0] $end
+$var wire 65 A shifted_two_x [64:0] $end
+$var reg 1 B correction_carry $end
+$var reg 65 C partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[1] $end
+$var parameter 2 D g $end
+$scope module eng $end
+$var wire 64 E multiplicand_x [63:0] $end
+$var wire 3 F multiplier_group_y [2:0] $end
+$var wire 65 G shifted_two_x [64:0] $end
+$var reg 1 H correction_carry $end
+$var reg 65 I partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[2] $end
+$var parameter 3 J g $end
+$scope module eng $end
+$var wire 64 K multiplicand_x [63:0] $end
+$var wire 3 L multiplier_group_y [2:0] $end
+$var wire 65 M shifted_two_x [64:0] $end
+$var reg 1 N correction_carry $end
+$var reg 65 O partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[3] $end
+$var parameter 3 P g $end
+$scope module eng $end
+$var wire 64 Q multiplicand_x [63:0] $end
+$var wire 3 R multiplier_group_y [2:0] $end
+$var wire 65 S shifted_two_x [64:0] $end
+$var reg 1 T correction_carry $end
+$var reg 65 U partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[4] $end
+$var parameter 4 V g $end
+$scope module eng $end
+$var wire 64 W multiplicand_x [63:0] $end
+$var wire 3 X multiplier_group_y [2:0] $end
+$var wire 65 Y shifted_two_x [64:0] $end
+$var reg 1 Z correction_carry $end
+$var reg 65 [ partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[5] $end
+$var parameter 4 \ g $end
+$scope module eng $end
+$var wire 64 ] multiplicand_x [63:0] $end
+$var wire 3 ^ multiplier_group_y [2:0] $end
+$var wire 65 _ shifted_two_x [64:0] $end
+$var reg 1 ` correction_carry $end
+$var reg 65 a partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[6] $end
+$var parameter 4 b g $end
+$scope module eng $end
+$var wire 64 c multiplicand_x [63:0] $end
+$var wire 3 d multiplier_group_y [2:0] $end
+$var wire 65 e shifted_two_x [64:0] $end
+$var reg 1 f correction_carry $end
+$var reg 65 g partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[7] $end
+$var parameter 4 h g $end
+$scope module eng $end
+$var wire 64 i multiplicand_x [63:0] $end
+$var wire 3 j multiplier_group_y [2:0] $end
+$var wire 65 k shifted_two_x [64:0] $end
+$var reg 1 l correction_carry $end
+$var reg 65 m partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[8] $end
+$var parameter 5 n g $end
+$scope module eng $end
+$var wire 64 o multiplicand_x [63:0] $end
+$var wire 3 p multiplier_group_y [2:0] $end
+$var wire 65 q shifted_two_x [64:0] $end
+$var reg 1 r correction_carry $end
+$var reg 65 s partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[9] $end
+$var parameter 5 t g $end
+$scope module eng $end
+$var wire 64 u multiplicand_x [63:0] $end
+$var wire 3 v multiplier_group_y [2:0] $end
+$var wire 65 w shifted_two_x [64:0] $end
+$var reg 1 x correction_carry $end
+$var reg 65 y partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[10] $end
+$var parameter 5 z g $end
+$scope module eng $end
+$var wire 64 { multiplicand_x [63:0] $end
+$var wire 3 | multiplier_group_y [2:0] $end
+$var wire 65 } shifted_two_x [64:0] $end
+$var reg 1 ~ correction_carry $end
+$var reg 65 !" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[11] $end
+$var parameter 5 "" g $end
+$scope module eng $end
+$var wire 64 #" multiplicand_x [63:0] $end
+$var wire 3 $" multiplier_group_y [2:0] $end
+$var wire 65 %" shifted_two_x [64:0] $end
+$var reg 1 &" correction_carry $end
+$var reg 65 '" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[12] $end
+$var parameter 5 (" g $end
+$scope module eng $end
+$var wire 64 )" multiplicand_x [63:0] $end
+$var wire 3 *" multiplier_group_y [2:0] $end
+$var wire 65 +" shifted_two_x [64:0] $end
+$var reg 1 ," correction_carry $end
+$var reg 65 -" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[13] $end
+$var parameter 5 ." g $end
+$scope module eng $end
+$var wire 64 /" multiplicand_x [63:0] $end
+$var wire 3 0" multiplier_group_y [2:0] $end
+$var wire 65 1" shifted_two_x [64:0] $end
+$var reg 1 2" correction_carry $end
+$var reg 65 3" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[14] $end
+$var parameter 5 4" g $end
+$scope module eng $end
+$var wire 64 5" multiplicand_x [63:0] $end
+$var wire 3 6" multiplier_group_y [2:0] $end
+$var wire 65 7" shifted_two_x [64:0] $end
+$var reg 1 8" correction_carry $end
+$var reg 65 9" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[15] $end
+$var parameter 5 :" g $end
+$scope module eng $end
+$var wire 64 ;" multiplicand_x [63:0] $end
+$var wire 3 <" multiplier_group_y [2:0] $end
+$var wire 65 =" shifted_two_x [64:0] $end
+$var reg 1 >" correction_carry $end
+$var reg 65 ?" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[16] $end
+$var parameter 6 @" g $end
+$scope module eng $end
+$var wire 64 A" multiplicand_x [63:0] $end
+$var wire 3 B" multiplier_group_y [2:0] $end
+$var wire 65 C" shifted_two_x [64:0] $end
+$var reg 1 D" correction_carry $end
+$var reg 65 E" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[17] $end
+$var parameter 6 F" g $end
+$scope module eng $end
+$var wire 64 G" multiplicand_x [63:0] $end
+$var wire 3 H" multiplier_group_y [2:0] $end
+$var wire 65 I" shifted_two_x [64:0] $end
+$var reg 1 J" correction_carry $end
+$var reg 65 K" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[18] $end
+$var parameter 6 L" g $end
+$scope module eng $end
+$var wire 64 M" multiplicand_x [63:0] $end
+$var wire 3 N" multiplier_group_y [2:0] $end
+$var wire 65 O" shifted_two_x [64:0] $end
+$var reg 1 P" correction_carry $end
+$var reg 65 Q" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[19] $end
+$var parameter 6 R" g $end
+$scope module eng $end
+$var wire 64 S" multiplicand_x [63:0] $end
+$var wire 3 T" multiplier_group_y [2:0] $end
+$var wire 65 U" shifted_two_x [64:0] $end
+$var reg 1 V" correction_carry $end
+$var reg 65 W" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[20] $end
+$var parameter 6 X" g $end
+$scope module eng $end
+$var wire 64 Y" multiplicand_x [63:0] $end
+$var wire 3 Z" multiplier_group_y [2:0] $end
+$var wire 65 [" shifted_two_x [64:0] $end
+$var reg 1 \" correction_carry $end
+$var reg 65 ]" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[21] $end
+$var parameter 6 ^" g $end
+$scope module eng $end
+$var wire 64 _" multiplicand_x [63:0] $end
+$var wire 3 `" multiplier_group_y [2:0] $end
+$var wire 65 a" shifted_two_x [64:0] $end
+$var reg 1 b" correction_carry $end
+$var reg 65 c" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[22] $end
+$var parameter 6 d" g $end
+$scope module eng $end
+$var wire 64 e" multiplicand_x [63:0] $end
+$var wire 3 f" multiplier_group_y [2:0] $end
+$var wire 65 g" shifted_two_x [64:0] $end
+$var reg 1 h" correction_carry $end
+$var reg 65 i" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[23] $end
+$var parameter 6 j" g $end
+$scope module eng $end
+$var wire 64 k" multiplicand_x [63:0] $end
+$var wire 3 l" multiplier_group_y [2:0] $end
+$var wire 65 m" shifted_two_x [64:0] $end
+$var reg 1 n" correction_carry $end
+$var reg 65 o" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[24] $end
+$var parameter 6 p" g $end
+$scope module eng $end
+$var wire 64 q" multiplicand_x [63:0] $end
+$var wire 3 r" multiplier_group_y [2:0] $end
+$var wire 65 s" shifted_two_x [64:0] $end
+$var reg 1 t" correction_carry $end
+$var reg 65 u" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[25] $end
+$var parameter 6 v" g $end
+$scope module eng $end
+$var wire 64 w" multiplicand_x [63:0] $end
+$var wire 3 x" multiplier_group_y [2:0] $end
+$var wire 65 y" shifted_two_x [64:0] $end
+$var reg 1 z" correction_carry $end
+$var reg 65 {" partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[26] $end
+$var parameter 6 |" g $end
+$scope module eng $end
+$var wire 64 }" multiplicand_x [63:0] $end
+$var wire 3 ~" multiplier_group_y [2:0] $end
+$var wire 65 !# shifted_two_x [64:0] $end
+$var reg 1 "# correction_carry $end
+$var reg 65 ## partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[27] $end
+$var parameter 6 $# g $end
+$scope module eng $end
+$var wire 64 %# multiplicand_x [63:0] $end
+$var wire 3 &# multiplier_group_y [2:0] $end
+$var wire 65 '# shifted_two_x [64:0] $end
+$var reg 1 (# correction_carry $end
+$var reg 65 )# partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[28] $end
+$var parameter 6 *# g $end
+$scope module eng $end
+$var wire 64 +# multiplicand_x [63:0] $end
+$var wire 3 ,# multiplier_group_y [2:0] $end
+$var wire 65 -# shifted_two_x [64:0] $end
+$var reg 1 .# correction_carry $end
+$var reg 65 /# partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[29] $end
+$var parameter 6 0# g $end
+$scope module eng $end
+$var wire 64 1# multiplicand_x [63:0] $end
+$var wire 3 2# multiplier_group_y [2:0] $end
+$var wire 65 3# shifted_two_x [64:0] $end
+$var reg 1 4# correction_carry $end
+$var reg 65 5# partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[30] $end
+$var parameter 6 6# g $end
+$scope module eng $end
+$var wire 64 7# multiplicand_x [63:0] $end
+$var wire 3 8# multiplier_group_y [2:0] $end
+$var wire 65 9# shifted_two_x [64:0] $end
+$var reg 1 :# correction_carry $end
+$var reg 65 ;# partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin booth_gen[31] $end
+$var parameter 6 <# g $end
+$scope module eng $end
+$var wire 64 =# multiplicand_x [63:0] $end
+$var wire 3 ># multiplier_group_y [2:0] $end
+$var wire 65 ?# shifted_two_x [64:0] $end
+$var reg 1 @# correction_carry $end
+$var reg 65 A# partial_prod_out [64:0] $end
+$upscope $end
+$upscope $end
+$scope begin layer1[0] $end
+$var parameter 2 B# g $end
+$scope module csa $end
+$var wire 128 C# carry_out [127:0] $end
+$var wire 128 D# in1 [127:0] $end
+$var wire 128 E# in2 [127:0] $end
+$var wire 128 F# in3 [127:0] $end
+$var wire 128 G# sum_out [127:0] $end
+$var parameter 32 H# WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer1[1] $end
+$var parameter 2 I# g $end
+$scope module csa $end
+$var wire 128 J# carry_out [127:0] $end
+$var wire 128 K# in1 [127:0] $end
+$var wire 128 L# in2 [127:0] $end
+$var wire 128 M# in3 [127:0] $end
+$var wire 128 N# sum_out [127:0] $end
+$var parameter 32 O# WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer1[2] $end
+$var parameter 3 P# g $end
+$scope module csa $end
+$var wire 128 Q# carry_out [127:0] $end
+$var wire 128 R# in1 [127:0] $end
+$var wire 128 S# in2 [127:0] $end
+$var wire 128 T# in3 [127:0] $end
+$var wire 128 U# sum_out [127:0] $end
+$var parameter 32 V# WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer1[3] $end
+$var parameter 3 W# g $end
+$scope module csa $end
+$var wire 128 X# carry_out [127:0] $end
+$var wire 128 Y# in1 [127:0] $end
+$var wire 128 Z# in2 [127:0] $end
+$var wire 128 [# in3 [127:0] $end
+$var wire 128 \# sum_out [127:0] $end
+$var parameter 32 ]# WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer1[4] $end
+$var parameter 4 ^# g $end
+$scope module csa $end
+$var wire 128 _# carry_out [127:0] $end
+$var wire 128 `# in1 [127:0] $end
+$var wire 128 a# in2 [127:0] $end
+$var wire 128 b# in3 [127:0] $end
+$var wire 128 c# sum_out [127:0] $end
+$var parameter 32 d# WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer1[5] $end
+$var parameter 4 e# g $end
+$scope module csa $end
+$var wire 128 f# carry_out [127:0] $end
+$var wire 128 g# in1 [127:0] $end
+$var wire 128 h# in2 [127:0] $end
+$var wire 128 i# in3 [127:0] $end
+$var wire 128 j# sum_out [127:0] $end
+$var parameter 32 k# WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer1[6] $end
+$var parameter 4 l# g $end
+$scope module csa $end
+$var wire 128 m# carry_out [127:0] $end
+$var wire 128 n# in1 [127:0] $end
+$var wire 128 o# in2 [127:0] $end
+$var wire 128 p# in3 [127:0] $end
+$var wire 128 q# sum_out [127:0] $end
+$var parameter 32 r# WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer1[7] $end
+$var parameter 4 s# g $end
+$scope module csa $end
+$var wire 128 t# carry_out [127:0] $end
+$var wire 128 u# in1 [127:0] $end
+$var wire 128 v# in2 [127:0] $end
+$var wire 128 w# in3 [127:0] $end
+$var wire 128 x# sum_out [127:0] $end
+$var parameter 32 y# WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer1[8] $end
+$var parameter 5 z# g $end
+$scope module csa $end
+$var wire 128 {# carry_out [127:0] $end
+$var wire 128 |# in1 [127:0] $end
+$var wire 128 }# in2 [127:0] $end
+$var wire 128 ~# in3 [127:0] $end
+$var wire 128 !$ sum_out [127:0] $end
+$var parameter 32 "$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer1[9] $end
+$var parameter 5 #$ g $end
+$scope module csa $end
+$var wire 128 $$ carry_out [127:0] $end
+$var wire 128 %$ in1 [127:0] $end
+$var wire 128 &$ in2 [127:0] $end
+$var wire 128 '$ in3 [127:0] $end
+$var wire 128 ($ sum_out [127:0] $end
+$var parameter 32 )$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer2[0] $end
+$var parameter 2 *$ g $end
+$scope module csa $end
+$var wire 128 +$ carry_out [127:0] $end
+$var wire 128 ,$ sum_out [127:0] $end
+$var wire 128 -$ in3 [127:0] $end
+$var wire 128 .$ in2 [127:0] $end
+$var wire 128 /$ in1 [127:0] $end
+$var parameter 32 0$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer2[1] $end
+$var parameter 2 1$ g $end
+$scope module csa $end
+$var wire 128 2$ carry_out [127:0] $end
+$var wire 128 3$ sum_out [127:0] $end
+$var wire 128 4$ in3 [127:0] $end
+$var wire 128 5$ in2 [127:0] $end
+$var wire 128 6$ in1 [127:0] $end
+$var parameter 32 7$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer2[2] $end
+$var parameter 3 8$ g $end
+$scope module csa $end
+$var wire 128 9$ carry_out [127:0] $end
+$var wire 128 :$ sum_out [127:0] $end
+$var wire 128 ;$ in3 [127:0] $end
+$var wire 128 <$ in2 [127:0] $end
+$var wire 128 =$ in1 [127:0] $end
+$var parameter 32 >$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer2[3] $end
+$var parameter 3 ?$ g $end
+$scope module csa $end
+$var wire 128 @$ carry_out [127:0] $end
+$var wire 128 A$ sum_out [127:0] $end
+$var wire 128 B$ in3 [127:0] $end
+$var wire 128 C$ in2 [127:0] $end
+$var wire 128 D$ in1 [127:0] $end
+$var parameter 32 E$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer2[4] $end
+$var parameter 4 F$ g $end
+$scope module csa $end
+$var wire 128 G$ carry_out [127:0] $end
+$var wire 128 H$ sum_out [127:0] $end
+$var wire 128 I$ in3 [127:0] $end
+$var wire 128 J$ in2 [127:0] $end
+$var wire 128 K$ in1 [127:0] $end
+$var parameter 32 L$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer2[5] $end
+$var parameter 4 M$ g $end
+$scope module csa $end
+$var wire 128 N$ carry_out [127:0] $end
+$var wire 128 O$ sum_out [127:0] $end
+$var wire 128 P$ in3 [127:0] $end
+$var wire 128 Q$ in2 [127:0] $end
+$var wire 128 R$ in1 [127:0] $end
+$var parameter 32 S$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer2[6] $end
+$var parameter 4 T$ g $end
+$scope module csa $end
+$var wire 128 U$ carry_out [127:0] $end
+$var wire 128 V$ in3 [127:0] $end
+$var wire 128 W$ sum_out [127:0] $end
+$var wire 128 X$ in2 [127:0] $end
+$var wire 128 Y$ in1 [127:0] $end
+$var parameter 32 Z$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer3[0] $end
+$var parameter 2 [$ g $end
+$scope module csa $end
+$var wire 128 \$ carry_out [127:0] $end
+$var wire 128 ]$ sum_out [127:0] $end
+$var wire 128 ^$ in3 [127:0] $end
+$var wire 128 _$ in2 [127:0] $end
+$var wire 128 `$ in1 [127:0] $end
+$var parameter 32 a$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer3[1] $end
+$var parameter 2 b$ g $end
+$scope module csa $end
+$var wire 128 c$ carry_out [127:0] $end
+$var wire 128 d$ sum_out [127:0] $end
+$var wire 128 e$ in3 [127:0] $end
+$var wire 128 f$ in2 [127:0] $end
+$var wire 128 g$ in1 [127:0] $end
+$var parameter 32 h$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer3[2] $end
+$var parameter 3 i$ g $end
+$scope module csa $end
+$var wire 128 j$ carry_out [127:0] $end
+$var wire 128 k$ sum_out [127:0] $end
+$var wire 128 l$ in3 [127:0] $end
+$var wire 128 m$ in2 [127:0] $end
+$var wire 128 n$ in1 [127:0] $end
+$var parameter 32 o$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer3[3] $end
+$var parameter 3 p$ g $end
+$scope module csa $end
+$var wire 128 q$ carry_out [127:0] $end
+$var wire 128 r$ sum_out [127:0] $end
+$var wire 128 s$ in3 [127:0] $end
+$var wire 128 t$ in2 [127:0] $end
+$var wire 128 u$ in1 [127:0] $end
+$var parameter 32 v$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer3[4] $end
+$var parameter 4 w$ g $end
+$scope module csa $end
+$var wire 128 x$ carry_out [127:0] $end
+$var wire 128 y$ in3 [127:0] $end
+$var wire 128 z$ sum_out [127:0] $end
+$var wire 128 {$ in2 [127:0] $end
+$var wire 128 |$ in1 [127:0] $end
+$var parameter 32 }$ WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer4[0] $end
+$var parameter 2 ~$ g $end
+$scope module csa $end
+$var wire 128 !% carry_out [127:0] $end
+$var wire 128 "% sum_out [127:0] $end
+$var wire 128 #% in3 [127:0] $end
+$var wire 128 $% in2 [127:0] $end
+$var wire 128 %% in1 [127:0] $end
+$var parameter 32 &% WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer4[1] $end
+$var parameter 2 '% g $end
+$scope module csa $end
+$var wire 128 (% carry_out [127:0] $end
+$var wire 128 )% sum_out [127:0] $end
+$var wire 128 *% in3 [127:0] $end
+$var wire 128 +% in2 [127:0] $end
+$var wire 128 ,% in1 [127:0] $end
+$var parameter 32 -% WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer4[2] $end
+$var parameter 3 .% g $end
+$scope module csa $end
+$var wire 128 /% carry_out [127:0] $end
+$var wire 128 0% sum_out [127:0] $end
+$var wire 128 1% in3 [127:0] $end
+$var wire 128 2% in2 [127:0] $end
+$var wire 128 3% in1 [127:0] $end
+$var parameter 32 4% WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer5[0] $end
+$var parameter 2 5% g $end
+$scope module csa $end
+$var wire 128 6% carry_out [127:0] $end
+$var wire 128 7% sum_out [127:0] $end
+$var wire 128 8% in3 [127:0] $end
+$var wire 128 9% in2 [127:0] $end
+$var wire 128 :% in1 [127:0] $end
+$var parameter 32 ;% WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin layer5[1] $end
+$var parameter 2 <% g $end
+$scope module csa $end
+$var wire 128 =% carry_out [127:0] $end
+$var wire 128 >% sum_out [127:0] $end
+$var wire 128 ?% in3 [127:0] $end
+$var wire 128 @% in2 [127:0] $end
+$var wire 128 A% in1 [127:0] $end
+$var parameter 32 B% WIDTH $end
+$upscope $end
+$upscope $end
+$scope begin map_l2[0] $end
+$var parameter 2 C% g $end
+$upscope $end
+$scope begin map_l2[1] $end
+$var parameter 2 D% g $end
+$upscope $end
+$scope begin map_l2[2] $end
+$var parameter 3 E% g $end
+$upscope $end
+$scope begin map_l2[3] $end
+$var parameter 3 F% g $end
+$upscope $end
+$scope begin map_l2[4] $end
+$var parameter 4 G% g $end
+$upscope $end
+$scope begin map_l2[5] $end
+$var parameter 4 H% g $end
+$upscope $end
+$scope begin map_l2[6] $end
+$var parameter 4 I% g $end
+$upscope $end
+$scope begin map_l2[7] $end
+$var parameter 4 J% g $end
+$upscope $end
+$scope begin map_l2[8] $end
+$var parameter 5 K% g $end
+$upscope $end
+$scope begin map_l2[9] $end
+$var parameter 5 L% g $end
+$upscope $end
+$scope begin map_l3[0] $end
+$var parameter 2 M% g $end
+$upscope $end
+$scope begin map_l3[1] $end
+$var parameter 2 N% g $end
+$upscope $end
+$scope begin map_l3[2] $end
+$var parameter 3 O% g $end
+$upscope $end
+$scope begin map_l3[3] $end
+$var parameter 3 P% g $end
+$upscope $end
+$scope begin map_l3[4] $end
+$var parameter 4 Q% g $end
+$upscope $end
+$scope begin map_l3[5] $end
+$var parameter 4 R% g $end
+$upscope $end
+$scope begin map_l3[6] $end
+$var parameter 4 S% g $end
+$upscope $end
+$scope begin map_l4[0] $end
+$var parameter 2 T% g $end
+$upscope $end
+$scope begin map_l4[1] $end
+$var parameter 2 U% g $end
+$upscope $end
+$scope begin map_l4[2] $end
+$var parameter 3 V% g $end
+$upscope $end
+$scope begin map_l4[3] $end
+$var parameter 3 W% g $end
+$upscope $end
+$scope begin map_l4[4] $end
+$var parameter 4 X% g $end
+$upscope $end
+$scope begin map_l5[0] $end
+$var parameter 2 Y% g $end
+$upscope $end
+$scope begin map_l5[1] $end
+$var parameter 2 Z% g $end
+$upscope $end
+$scope begin map_l5[2] $end
+$var parameter 3 [% g $end
+$upscope $end
+$scope module csa6 $end
+$var wire 128 \% carry_out [127:0] $end
+$var wire 128 ]% in1 [127:0] $end
+$var wire 128 ^% in2 [127:0] $end
+$var wire 128 _% in3 [127:0] $end
+$var wire 128 `% sum_out [127:0] $end
+$var parameter 32 a% WIDTH $end
+$upscope $end
+$scope module csa7 $end
+$var wire 128 b% carry_out [127:0] $end
+$var wire 128 c% in1 [127:0] $end
+$var wire 128 d% in2 [127:0] $end
+$var wire 128 e% in3 [127:0] $end
+$var wire 128 f% sum_out [127:0] $end
+$var parameter 32 g% WIDTH $end
+$upscope $end
+$scope module csa8 $end
+$var wire 128 h% carry_out [127:0] $end
+$var wire 128 i% in1 [127:0] $end
+$var wire 128 j% in2 [127:0] $end
+$var wire 128 k% in3 [127:0] $end
+$var wire 128 l% sum_out [127:0] $end
+$var parameter 32 m% WIDTH $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10000000 m%
+b10000000 g%
+b10000000 a%
+b10 [%
+b1 Z%
+b0 Y%
+b100 X%
+b11 W%
+b10 V%
+b1 U%
+b0 T%
+b110 S%
+b101 R%
+b100 Q%
+b11 P%
+b10 O%
+b1 N%
+b0 M%
+b1001 L%
+b1000 K%
+b111 J%
+b110 I%
+b101 H%
+b100 G%
+b11 F%
+b10 E%
+b1 D%
+b0 C%
+b10000000 B%
+b1 <%
+b10000000 ;%
+b0 5%
+b10000000 4%
+b10 .%
+b10000000 -%
+b1 '%
+b10000000 &%
+b0 ~$
+b10000000 }$
+b100 w$
+b10000000 v$
+b11 p$
+b10000000 o$
+b10 i$
+b10000000 h$
+b1 b$
+b10000000 a$
+b0 [$
+b10000000 Z$
+b110 T$
+b10000000 S$
+b101 M$
+b10000000 L$
+b100 F$
+b10000000 E$
+b11 ?$
+b10000000 >$
+b10 8$
+b10000000 7$
+b1 1$
+b10000000 0$
+b0 *$
+b10000000 )$
+b1001 #$
+b10000000 "$
+b1000 z#
+b10000000 y#
+b111 s#
+b10000000 r#
+b110 l#
+b10000000 k#
+b101 e#
+b10000000 d#
+b100 ^#
+b10000000 ]#
+b11 W#
+b10000000 V#
+b10 P#
+b10000000 O#
+b1 I#
+b10000000 H#
+b0 B#
+b11111 <#
+b11110 6#
+b11101 0#
+b11100 *#
+b11011 $#
+b11010 |"
+b11001 v"
+b11000 p"
+b10111 j"
+b10110 d"
+b10101 ^"
+b10100 X"
+b10011 R"
+b10010 L"
+b10001 F"
+b10000 @"
+b1111 :"
+b1110 4"
+b1101 ."
+b1100 ("
+b1011 ""
+b1010 z
+b1001 t
+b1000 n
+b111 h
+b110 b
+b101 \
+b100 V
+b11 P
+b10 J
+b1 D
+b0 >
+b1000000 4
+$end
+#0
+$dumpvars
+b0 l%
+b0 k%
+b0 j%
+b0 i%
+b0 h%
+b0 f%
+b0 e%
+b0 d%
+b0 c%
+b0 b%
+b0 `%
+b0 _%
+b0 ^%
+b0 ]%
+b0 \%
+b0 A%
+b0 @%
+b0 ?%
+b0 >%
+b0 =%
+b0 :%
+b0 9%
+b0 8%
+b0 7%
+b0 6%
+b0 3%
+b0 2%
+b0 1%
+b0 0%
+b0 /%
+b0 ,%
+b0 +%
+b0 *%
+b0 )%
+b0 (%
+b0 %%
+b0 $%
+b0 #%
+b0 "%
+b0 !%
+b0 |$
+b0 {$
+b0 z$
+b0 y$
+b0 x$
+b0 u$
+b0 t$
+b0 s$
+b0 r$
+b0 q$
+b0 n$
+b0 m$
+b0 l$
+b0 k$
+b0 j$
+b0 g$
+b0 f$
+b0 e$
+b0 d$
+b0 c$
+b0 `$
+b0 _$
+b0 ^$
+b0 ]$
+b0 \$
+b0 Y$
+b0 X$
+b0 W$
+b0 V$
+b0 U$
+b0 R$
+b0 Q$
+b0 P$
+b0 O$
+b0 N$
+b0 K$
+b0 J$
+b0 I$
+b0 H$
+b0 G$
+b0 D$
+b0 C$
+b0 B$
+b0 A$
+b0 @$
+b0 =$
+b0 <$
+b0 ;$
+b0 :$
+b0 9$
+b0 6$
+b0 5$
+b0 4$
+b0 3$
+b0 2$
+b0 /$
+b0 .$
+b0 -$
+b0 ,$
+b0 +$
+b0 ($
+b0 '$
+b0 &$
+b0 %$
+b0 $$
+b0 !$
+b0 ~#
+b0 }#
+b0 |#
+b0 {#
+b0 x#
+b0 w#
+b0 v#
+b0 u#
+b0 t#
+b0 q#
+b0 p#
+b0 o#
+b0 n#
+b0 m#
+b0 j#
+b0 i#
+b0 h#
+b0 g#
+b0 f#
+b0 c#
+b0 b#
+b0 a#
+b0 `#
+b0 _#
+b0 \#
+b0 [#
+b0 Z#
+b0 Y#
+b0 X#
+b0 U#
+b0 T#
+b0 S#
+b0 R#
+b0 Q#
+b0 N#
+b0 M#
+b0 L#
+b0 K#
+b0 J#
+b0 G#
+b0 F#
+b0 E#
+b0 D#
+b0 C#
+b0 A#
+0@#
+b0 ?#
+b0 >#
+b0 =#
+b0 ;#
+0:#
+b0 9#
+b0 8#
+b0 7#
+b0 5#
+04#
+b0 3#
+b0 2#
+b0 1#
+b0 /#
+0.#
+b0 -#
+b0 ,#
+b0 +#
+b0 )#
+0(#
+b0 '#
+b0 &#
+b0 %#
+b0 ##
+0"#
+b0 !#
+b0 ~"
+b0 }"
+b0 {"
+0z"
+b0 y"
+b0 x"
+b0 w"
+b0 u"
+0t"
+b0 s"
+b0 r"
+b0 q"
+b0 o"
+0n"
+b0 m"
+b0 l"
+b0 k"
+b0 i"
+0h"
+b0 g"
+b0 f"
+b0 e"
+b0 c"
+0b"
+b0 a"
+b0 `"
+b0 _"
+b0 ]"
+0\"
+b0 ["
+b0 Z"
+b0 Y"
+b0 W"
+0V"
+b0 U"
+b0 T"
+b0 S"
+b0 Q"
+0P"
+b0 O"
+b0 N"
+b0 M"
+b0 K"
+0J"
+b0 I"
+b0 H"
+b0 G"
+b0 E"
+0D"
+b0 C"
+b0 B"
+b0 A"
+b0 ?"
+0>"
+b0 ="
+b0 <"
+b0 ;"
+b0 9"
+08"
+b0 7"
+b0 6"
+b0 5"
+b0 3"
+02"
+b0 1"
+b0 0"
+b0 /"
+b0 -"
+0,"
+b0 +"
+b0 *"
+b0 )"
+b0 '"
+0&"
+b0 %"
+b0 $"
+b0 #"
+b0 !"
+0~
+b0 }
+b0 |
+b0 {
+b0 y
+0x
+b0 w
+b0 v
+b0 u
+b0 s
+0r
+b0 q
+b0 p
+b0 o
+b0 m
+0l
+b0 k
+b0 j
+b0 i
+b0 g
+0f
+b0 e
+b0 d
+b0 c
+b0 a
+0`
+b0 _
+b0 ^
+b0 ]
+b0 [
+0Z
+b0 Y
+b0 X
+b0 W
+b0 U
+0T
+b0 S
+b0 R
+b0 Q
+b0 O
+0N
+b0 M
+b0 L
+b0 K
+b0 I
+0H
+b0 G
+b0 F
+b0 E
+b0 C
+0B
+b0 A
+b0 @
+b0 ?
+b100000 =
+0<
+0;
+0:
+b0 9
+b0 8
+b0 7
+b0 6
+b0 5
+b0 3
+b0 2
+b0 1
+b0 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+0'
+b0 &
+b0 %
+0$
+0#
+0"
+b0 !
+$end
+#5
+b100000 =
+1#
+#10
+0#
+#15
+b100000 =
+1#
+#20
+0#
+1'
+#25
+b100000 =
+1#
+#30
+0#
+#35
+b1 *
+1B
+b11111111111111111111111111111111111111111111111111111111111111010 C
+b101 I
+b110 @
+b1 F
+b1010 A
+b1010 G
+b1010 M
+b1010 S
+b1010 Y
+b1010 _
+b1010 e
+b1010 k
+b1010 q
+b1010 w
+b1010 }
+b1010 %"
+b1010 +"
+b1010 1"
+b1010 7"
+b1010 ="
+b1010 C"
+b1010 I"
+b1010 O"
+b1010 U"
+b1010 ["
+b1010 a"
+b1010 g"
+b1010 m"
+b1010 s"
+b1010 y"
+b1010 !#
+b1010 '#
+b1010 -#
+b1010 3#
+b1010 9#
+b1010 ?#
+b11 7
+b101 6
+b101 ?
+b101 E
+b101 K
+b101 Q
+b101 W
+b101 ]
+b101 c
+b101 i
+b101 o
+b101 u
+b101 {
+b101 #"
+b101 )"
+b101 /"
+b101 5"
+b101 ;"
+b101 A"
+b101 G"
+b101 M"
+b101 S"
+b101 Y"
+b101 _"
+b101 e"
+b101 k"
+b101 q"
+b101 w"
+b101 }"
+b101 %#
+b101 +#
+b101 1#
+b101 7#
+b101 =#
+1:
+b100000 =
+b11 &
+b11 )
+b101 %
+b101 (
+1$
+1#
+#40
+0#
+#45
+b1000000000 -
+b100000000 ,
+b100000000 h%
+b100000000 0
+b100000000 j%
+b10000000 /
+b10000000 b%
+b10000000 3
+b10000000 d%
+b1000000 2
+b1000000 \%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000001111 +
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000001111 l%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100001111 .
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100001111 f%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100001111 i%
+b1000000 ^%
+b1000000 >%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110001111 1
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110001111 `%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110001111 c%
+b1000000 A%
+b100000 !%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111001111 ]%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111001111 7%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111001111 :%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111001111 "%
+b100000 $%
+b100000 d$
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111 %%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111 ]$
+b100000 g$
+b100000 A$
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111 `$
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111 ,$
+b100000 C$
+b10000 C#
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111 /$
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111 G#
+1H
+b1100 O
+b100 @
+b101 F
+b1 L
+b11 *
+1B
+b11111111111111111111111111111111111111111111111111111111111100111 C
+b11000 A
+b11111111111111111111111111111111111111111111111111111111111110011 I
+b11000 G
+b11000 M
+b11000 S
+b11000 Y
+b11000 _
+b11000 e
+b11000 k
+b11000 q
+b11000 w
+b11000 }
+b11000 %"
+b11000 +"
+b11000 1"
+b11000 7"
+b11000 ="
+b11000 C"
+b11000 I"
+b11000 O"
+b11000 U"
+b11000 ["
+b11000 a"
+b11000 g"
+b11000 m"
+b11000 s"
+b11000 y"
+b11000 !#
+b11000 '#
+b11000 -#
+b11000 3#
+b11000 9#
+b11000 ?#
+b10100 E#
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111011 D#
+1;
+b1010 7
+b1100 6
+b1100 ?
+b1100 E
+b1100 K
+b1100 Q
+b1100 W
+b1100 ]
+b1100 c
+b1100 i
+b1100 o
+b1100 u
+b1100 {
+b1100 #"
+b1100 )"
+b1100 /"
+b1100 5"
+b1100 ;"
+b1100 A"
+b1100 G"
+b1100 M"
+b1100 S"
+b1100 Y"
+b1100 _"
+b1100 e"
+b1100 k"
+b1100 q"
+b1100 w"
+b1100 }"
+b1100 %#
+b1100 +#
+b1100 1#
+b1100 7#
+b1100 =#
+b100000 =
+b1010 &
+b1010 )
+b1100 %
+b1100 (
+1#
+#50
+0#
+#55
+b100000000000 -
+b10000000000 0
+b10000000000 j%
+b10000000000 ,
+b10000000000 h%
+b1000000000 3
+b1000000000 d%
+b1000000000 /
+b1000000000 b%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100001111000 +
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100001111000 l%
+b100000000 2
+b100000000 \%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110001111000 .
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110001111000 f%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110001111000 i%
+b100000000 ^%
+b100000000 >%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111001111000 1
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111001111000 `%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111001111000 c%
+b100000000 A%
+b10000000 !%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111000 ]%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111000 7%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111000 :%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101111000 "%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000 $%
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000 d$
+b11111000 %%
+b11111000 ]$
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000 g$
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000 A$
+b11111000 `$
+b11111000 ,$
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110000000 C$
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000000 C#
+b11111000 /$
+b11111000 G#
+0:
+b11000000 F#
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111010000 E#
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111101000 D#
+1<
+b1000000000 8
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111000001111 9
+b100000 =
+0$
+1#
+#60
+0#
+#65
+1"
+b1111 !
+b1111 5
+b100000000000 8
+b11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111100001111000 9
+0;
+b100000 =
+1#
+#70
+0#
+#75
+0<
+b1111000 !
+b1111000 5
+b100000 =
+1#
+#80
+0#
+#85
+0"
+b100000 =
+1#
+#90
+0#
+#95
+b100000 =
+1#
+#96
