@@ -5,11 +5,41 @@ Implementation of a 64-bit Booth multiplier using structural SystemVerilog.
 ## Project Scope
 The design utilizes Radix-4 Booth encoding to generate partial products, structured into a multi-stage pipeline to improve throughput.
 
+## Architecture
+
+### Architecture Diagram
+
+![Architecture Diagram](diagrams/Architecture_Diagram.drawio.png)
+
+### Booth Encoding Process
+
+![Booth Encoding](diagrams/booth_encoding_process.drawio.png)
+
+### Wallace Tree Reduction
+
+![Wallace Tree Reduction](diagrams/wallace_tree_reduction.drawio.png)
+
+### Pipeline Timing
+
+![Pipeline Timing](diagrams/Pipeline_Timing_of_the_64-bit_Multiplier.drawio.png)
+
+
 ## Verification
+### Verification and Validation Flow
+
+![Verification Flow](diagrams/Verification_and_Validation_Flow.drawio.png)
+
+The design was verified using directed test cases and randomized test vectors. A reference multiplication model was used to compare the DUT output against the expected result after pipeline latency alignment.
+
 - **Toolchain:** Icarus Verilog.
 - **Methodology:** Testbench verification against known product vectors (e.g., 15 and 120).
-- **Waveforms:** 
-![Waveform Verification](waveform_results.png)
+
+### Waveform Results
+
+![Waveform Results](waveform_results.PNG)
+
+Waveform capture obtained during simulation showing correct pipeline operation and output generation.
+
 
 ## Synthesis Metrics (Yosys)
 The RTL was synthesized using Yosys. Optimization passes effectively reduced the netlist complexity:
