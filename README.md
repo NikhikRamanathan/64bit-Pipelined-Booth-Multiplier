@@ -9,25 +9,25 @@ The design utilizes Radix-4 Booth encoding to generate partial products, structu
 
 ### Architecture Diagram
 
-![Architecture Diagram](diagrams/Architecture_Diagram.drawio.png)
+![Architecture Diagram](Diagrams/Architecture_Diagram.drawio.png)
 
 ### Booth Encoding Process
 
-![Booth Encoding](diagrams/booth_encoding_process.drawio.png)
+![Booth Encoding](Diagrams/booth_encoding_process.drawio.png)
 
 ### Wallace Tree Reduction
 
-![Wallace Tree Reduction](diagrams/wallace_tree_reduction.drawio.png)
+![Wallace Tree Reduction](Diagrams/wallace_tree_reduction.drawio.png)
 
 ### Pipeline Timing
 
-![Pipeline Timing](diagrams/Pipeline_Timing_of_the_64-bit_Multiplier.drawio.png)
+![Pipeline Timing](Diagrams/Pipeline_Timing_of_the_64-bit_Multiplier.drawio.png)
 
 
 ## Verification
 ### Verification and Validation Flow
 
-![Verification Flow](diagrams/Verification_and_Validation_Flow.drawio.png)
+![Verification Flow](Diagrams/Verification_and_Validation_Flow.drawio.png)
 
 The design was verified using directed test cases and randomized test vectors. A reference multiplication model was used to compare the DUT output against the expected result after pipeline latency alignment.
 
@@ -36,7 +36,7 @@ The design was verified using directed test cases and randomized test vectors. A
 
 ### Waveform Results
 
-![Waveform Results](waveform_results.PNG)
+![Waveform Results](waveform_results.png)
 
 Waveform capture obtained during simulation showing correct pipeline operation and output generation.
 
