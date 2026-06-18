@@ -49,3 +49,46 @@ The RTL was synthesized using Yosys. Optimization passes effectively reduced the
 ## Design Notes
 - Design targets structural modularity for easy integration into larger arithmetic logic units (ALU).
 - Synthesis confirms the design maps to a standard cell library without inferred latches.
+
+## Repository Organization
+
+The repository contains multiple 64-bit multiplier architectures implemented and analyzed independently.
+
+```
+64bit-Pipelined-Booth-Multiplier
+│
+├── Array_Multiplier
+│   ├── design.sv
+│   ├── Array_Stats.txt
+│   ├── run.ys
+│   └── Array_Stats_screenshot.png
+│
+├── Booth_Multiplier
+│   ├── design.sv
+│   ├── Booth_Stats.txt
+│   ├── testbench.sv
+│   └── screenshot.png
+│
+├── Dadda_Multiplier
+│   ├── design.sv
+│   ├── output.txt
+│   ├── run.ys
+│   └── screenshot.png
+│
+└── README.md
+```
+
+### File Description
+
+Each architecture directory contains:
+
+- **design.sv** – SystemVerilog RTL implementation.
+- **output.txt** – Synthesis and simulation output logs.
+- **run.ys** – Yosys synthesis script.
+- **screenshot.png** – Screenshot showing synthesis and verification results.
+
+### Implemented Architectures
+
+- **Array Multiplier**
+- **Radix-4 Booth Multiplier**
+- **Dadda Multiplier**
