@@ -97,6 +97,16 @@ The same verification approach and comparable stimulus conditions were used acro
 
 The Dadda multiplier achieved the strongest overall power-performance-area trade-off among the evaluated architectures. Although the Booth multiplier used the lowest cell area, the Dadda multiplier achieved the shortest critical path delay, highest Fmax, positive timing slack at a 10 ns constraint, and the lowest activity-based power. The Array multiplier was structurally simple but showed the largest area, longest delay, and highest power consumption.
 
+## Additional Architecture Diagrams
+
+### Array Multiplier Architecture
+
+![Array Multiplier Architecture](diagrams/array_architecture.png)
+
+### Dadda Reduction Tree
+
+![Dadda Reduction Tree](diagrams/dadda_reduction_tree.png)
+
 ## Repository Organization
 
 ```text
@@ -115,22 +125,15 @@ results/
 figures/
 scripts/
 diagrams/
-Reproducibility
+recovered_root_files/
+```
 
-The repository includes RTL source files, testbenches, Yosys synthesis scripts, STA scripts, power analysis scripts, verification summaries, synthesis reports, timing reports, power reports, result graphs, and final comparison tables.
+## Reproducibility
 
-Large generated files and full SKY130 PDK directories are excluded from the repository to keep the project lightweight.
+The repository includes RTL source files, testbenches, Yosys synthesis scripts, STA scripts, OpenROAD power analysis scripts, verification summaries, synthesis reports, timing reports, power reports, result graphs, waveform evidence, and final comparison tables.
 
-Limitations
+Large generated files and full SKY130 PDK directories are excluded from the repository to keep the project lightweight. Users must provide the required SKY130 Liberty and LEF files locally when reproducing synthesis, timing, and power analysis.
+
+## Limitations
 
 The reported power values are activity-dependent and based on the supplied simulation stimulus. The analysis is pre-layout and does not include final routed parasitics. Therefore, the results should be interpreted as comparative open-source ASIC flow estimates rather than final silicon signoff results.
-
-## Additional Architecture Diagrams
-
-### Array Multiplier Architecture
-
-![Array Multiplier Architecture](diagrams/array_architecture.png)
-
-### Dadda Reduction Tree
-
-![Dadda Reduction Tree](diagrams/dadda_reduction_tree.png)
