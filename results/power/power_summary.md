@@ -1,13 +1,17 @@
-# Activity-Based Power Summary
+# OpenROAD Power Summary
 
-Activity-based power estimation was performed in OpenROAD using gate-level VCD switching activity generated from SKY130-mapped synthesized netlists.
+Power values are taken from the raw power reports in `results/power/`.
 
-| Architecture | Internal Power | Switching Power | Leakage Power | Total Power |
+| Architecture | Internal Power (W) | Switching Power (W) | Leakage Power (W) | Total Power (mW) |
 |---|---:|---:|---:|---:|
-| Array | 42.1 mW | 58.8 mW | 0.000125 mW | 101.0 mW |
-| Radix-4 Booth | 40.3 mW | 45.0 mW | 0.0000836 mW | 85.3 mW |
-| Dadda | 31.5 mW | 32.1 mW | 0.0000976 mW | 63.6 mW |
+| Array | 4.21e-02 | 5.88e-02 | 1.25e-07 | 101.0 |
+| Radix-4 Booth | 4.03e-02 | 4.50e-02 | 8.36e-08 | 85.3 |
+| Dadda | 3.15e-02 | 3.21e-02 | 9.76e-08 | 63.6 |
 
-## Notes
+## Raw Evidence
 
-Power values are reported from OpenROAD activity-based power analysis using gate-level switching activity. These values are intended for comparative evaluation across the three multiplier architectures.
+| Architecture | Raw Power Report |
+|---|---|
+| Array | results/power/array_power_report.txt |
+| Radix-4 Booth | results/power/booth_power_report.txt |
+| Dadda | results/power/dadda_power_report.txt |

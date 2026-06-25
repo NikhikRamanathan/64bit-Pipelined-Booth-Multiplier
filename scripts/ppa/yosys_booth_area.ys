@@ -1,0 +1,14 @@
+read_verilog -sv designs/booth/design.sv
+hierarchy -check -top booth_multiplier_64bit
+proc
+opt
+fsm
+opt
+memory
+opt
+techmap
+opt
+abc -liberty /home/ubuntu/sky130_fd_sc_hd__tt_025C_1v80.lib
+clean
+stat -liberty /home/ubuntu/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog results/netlists/booth_sky130_netlist.v
