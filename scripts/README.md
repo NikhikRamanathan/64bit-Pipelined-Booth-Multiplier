@@ -33,3 +33,7 @@ The following files are required locally but are not included in the repository:
 3. Run timing analysis using OpenSTA or OpenROAD timing commands.
 4. Generate gate-level VCD activity from post-synthesis simulation.
 5. Run OpenROAD power analysis using gate-level VCD activity.
+
+## Note on Generated Files
+
+The power analysis scripts are reproducibility templates. Before running them, users must generate the post-synthesis `synth_netlist.v` files and gate-level VCD files locally. These large/generated files are not fully included in the repository.
