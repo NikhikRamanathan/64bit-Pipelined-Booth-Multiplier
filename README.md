@@ -124,3 +124,13 @@ Large generated files and full SKY130 PDK directories are excluded from the repo
 Limitations
 
 The reported power values are activity-dependent and based on the supplied simulation stimulus. The analysis is pre-layout and does not include final routed parasitics. Therefore, the results should be interpreted as comparative open-source ASIC flow estimates rather than final silicon signoff results.
+
+## Additional Architecture Diagrams
+
+### Array Multiplier Architecture
+
+![Array Multiplier Architecture](diagrams/array_architecture.png)
+
+### Dadda Reduction Tree
+
+![Dadda Reduction Tree](diagrams/dadda_reduction_tree.png)
